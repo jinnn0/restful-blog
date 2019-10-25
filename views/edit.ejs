@@ -1,0 +1,55 @@
+<% include ./partials/header %>
+    
+<div class="form ui main container segment">
+    <h1><%= blog.title %></h1> 
+    <h2 class="ui huge">Edit</h2> 
+   <!-- HTML Form doesn’t support PUT request they only support GET and POST  -->
+   <!-- When you send a request as a PUT requrest it will default as a GET request -->
+    <form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+      <div class="field">     
+        <label for="">Category</label>
+        <div class="select-category">
+            <select class="select" name="blog[category]">
+                <option value="<%= category[0].name %>"> <%= category[0].name %> </option>
+                <option value="<%= category[1].name %>"><%= category[1].name %></option>
+                <option value="<%= category[2].name %>"><%= category[2].name %></option>
+            </select>
+
+            <div class="addCategory js-addCategory"> + </div>
+          </form>
+        </div>
+      </div>  
+      <div class="field">  
+        <label for="">Title</label>  
+        <input type="text" name="blog[title]" value="<%= blog.title %>">
+      </div>   
+      <div class="field"> 
+          <label for="">Image</label>
+          <input type="text" name= "blog[image]" value="<%= blog.image %>">
+      </div> 
+      <div class="field">
+          <label for="">Blog Content</label>
+          <textarea name="blog[body]" cols="30" rows="10"><%= blog.body %></textarea>
+      </div>  
+      <button class="ui primary basic button" type="submit">Submit</button>
+    </form> 
+
+    <form action="/blogs/<%= blog._id%>?_method=DELETE" method="POST">
+      <button class="button custom" type="submit"><i class="trash alternate outline icon"></i></button>
+    </form>
+  </div>    
+
+
+ 
+  <div class="form-modal js-form-modal">
+      <form class="ui form" action="">
+        <div class="close-icon js-close-icon"> x </div>
+        <div class="field">
+          <label for="">Name</label>
+          <input class="js-new-category" type="text" name="category[name]" placeholder="new category">
+        </div>
+        <button class="ui primary basic button" type="submit">Add</button>
+      </form> 
+  </div>  
+  
+<% include ./partials/footer %>  

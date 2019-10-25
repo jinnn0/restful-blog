@@ -1,0 +1,44 @@
+.form.ui.main.container {
+  width: 60%;
+  display: block;
+
+          .select-category {
+            display: flex;
+            align-items: center;
+          }
+
+          .select {
+            outline: none;
+            height: 38px;
+            flex: 8;
+          } 
+
+          .addCategory {
+            font-size: 1.7rem;
+            margin-left: 10px;
+            flex: 0.15;
+            cursor: pointer;
+          }
+
+          h3 {
+            margin-bottom: 30px;
+          }
+  
+          .button.custom {
+            display: inline;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            color: rgb(101, 101, 101);
+          }
+}
+
+
+@media (min-width: 1200px) {
+        .new.ui.container   {
+           width: 800px;
+        }
+}

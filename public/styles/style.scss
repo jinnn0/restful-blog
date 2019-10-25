@@ -1,0 +1,92 @@
+@import './base/global';
+@import './modules/header';
+@import './modules/side-bar';
+@import './modules/main-container';
+@import './modules/form';
+
+  
+.ui.vertical.menu { 
+  height: 300vh; 
+  width: 210px;
+  position: absolute;
+  margin: 0; 
+  padding-top: 50px;
+  background-color: rgba(27, 28, 29, 0.865);
+  border-radius: 0;
+  transform: translateX(-100%);
+  transition: .3s ease;
+  z-index: 100;
+   
+      h2,   
+      .menu .item {
+        color: white;
+      } 
+      
+      #sub-link:hover {
+        color: white;
+      }
+
+      .menu {
+        margin-bottom: 30px;
+      }
+
+}   
+
+.ui.vertical.menu.toggle-side-bar {
+  transform: translateX(0);  
+} 
+
+.ui.vertical.menu.hide-side-bar { 
+  transform: translateX(-100%);  
+} 
+
+ 
+
+.err {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  display: none;
+  
+        .ui.form {
+          width: 450px;
+          height: 350px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: rgb(255, 255, 255);
+          border: 1px solid rgb(177, 177, 177);
+          border-radius: 3px;
+        }
+
+        .ui.form input[type=text] {
+          width: 285px;
+          margin-bottom: 35px;
+          border: 1px solid rgb(177, 177, 177);
+        }
+
+        .close-icon {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: 1.4rem;
+          cursor: pointer;
+        }
+
+}

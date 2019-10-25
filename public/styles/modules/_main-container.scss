@@ -1,0 +1,55 @@
+.ui.inverted.menu {
+  padding: 0 5%;
+}  
+
+.custom.ui.main.container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.custom.ui.main.container,
+.ui.main.container {
+  // border: 3px solid yellow;
+  margin-top: 7%;
+  margin-bottom: 7%;
+
+          * {
+            margin: 0 auto;
+          }  
+
+          h1 { 
+            margin-bottom: 15px;
+          }
+
+          h2,
+          img {
+            margin-bottom: 10%;
+          }
+
+          img {
+            width: 90%;
+          }
+
+          span {
+            margin-bottom: 5%;
+          }
+
+          p {
+            width: 85%;
+            text-align: center;  
+            font-size: 1.05rem;
+            line-height: 25px;
+          }
+      
+          .field {
+            margin-bottom: 20px;
+          }
+
+          .custom-edit-icon {
+            margin-top: 10%;
+            text-align: left;
+         } 
+  
+}

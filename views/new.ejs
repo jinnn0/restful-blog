@@ -1,0 +1,52 @@
+<% include ./partials/header %>
+
+  <div class="form ui main container segment">
+    <h2 class="ui huge header">New Post</h2>
+       
+    <form class="ui form" action="/blogs" method="POST">
+      <div class="field">     
+          <label for="">Category</label> 
+          <div class="select-category">
+              <select class="select js-select" name="blog[category]">
+                  <option value="<%= category[0].name %>"> <%= category[0].name %> </option>
+                  <option value="<%= category[1].name %>"><%= category[1].name %></option>
+                  <option value="<%= category[2].name %>"><%= category[2].name %></option>
+              </select>
+              <div class="addCategory js-addCategory"> + </div>
+          </div>
+      </div>  
+       
+      <div class="field">   
+        <label for="">Title</label>
+        <input type="text" name="blog[title]" placeholder="title">
+      </div> 
+      <div class="field"> 
+          <label for="">Image</label>
+          <input type="text" name= blog[image] placeholder="image">
+      </div> 
+      <div class="field">
+          <label for="">Blog Content</label>
+          <textarea name="blog[body]" cols="30" rows="10"></textarea>
+      </div>  
+      <button class="ui primary basic button" type="submit">Submit</button>
+    </form> 
+  </div> 
+
+
+
+
+
+ 
+
+  <div class="form-modal js-form-modal">
+    <form class="ui form js-form" action="/blogs/addNewCategory" method="POST">
+      <div class="close-icon js-close-icon"> x </div>
+      <div class="field"> 
+        <label for="">Name</label>
+        <input class="js-new-category" type="text" name="newCategory" placeholder="new category">
+      </div>
+      <button class="ui primary basic button" type="submit">Add</button>
+    </form>
+  </div>
+     
+<% include ./partials/footer %>

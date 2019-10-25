@@ -1,0 +1,15 @@
+<% include ./partials/header %> 
+   
+<div class="show custom ui main container"> 
+  <h2 class="ui huge header"><%= blog.title %></h2>
+  <img class="centered rounded image" src="<%= blog.image %>">
+  <span><%= blog.created.toDateString() %></span>
+  <p><%- blog.body %></p>  
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt eum deleniti impedit, dignissimos atque odio ex exercitationem nobis voluptas id doloribus eius quidem neque! Nemo perspiciatis dolore veritatis quasi, repudiandae est voluptatum eveniet nobis dolor dignissimos itaque adipisci earum molestiae aperiam ipsum necessitatibus nostrum, laborum doloribus iure quos? Magni, quia nisi repudiandae enim assumenda at animi eum ex architecto ea! Assumenda quasi harum atque itaque id. Libero soluta amet itaque voluptates tenetur nostrum dolorum veritatis iusto maxime assumenda, ipsum, illo, optio dolor odit? Doloribus saepe quos nobis deleniti repudiandae. Recusandae, accusamus explicabo. Fugit corporis voluptatem illo necessitatibus! Quos animi odit magni aliquam ipsum ea incidunt, corporis voluptatum explicabo a dignissimos quidem est atque aspernatur ab pariatur architecto inventore. Culpa, maxime quo repellendus aliquid, tempore ipsam debitis odit consequuntur est quia amet officiis perferendis eius hic, nam sapiente. Perspiciatis porro reiciendis dolore doloribus quia nesciunt, assumenda quos delectus, nemo ipsam a!   
+  </p>  
+  <a href="/blogs/<%= blog._id %>/edit" class="custom-edit-icon"><i class="edit outline icon"></i></a> 
+ </form> 
+</div>
+  
+   
+<% include ./partials/footer %>
